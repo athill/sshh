@@ -41,6 +41,14 @@ if (Array.isArray(appconfig)) {
 		web: appconfig
 	}
 }
+
+//// ok, you should have a web key by now
+if (!appconfig.web) {
+	exit('"web" not found in appconfig', appconfig);
+}
+
+//// default behavior is web
+
 //// 
 console.log('appconfig', app, '::', appconfig.web);
 
